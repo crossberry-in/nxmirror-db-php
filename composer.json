@@ -1,0 +1,40 @@
+{
+    "name": "crossberry-in/nxmirror-db",
+    "description": "Official PHP SDK for the NxMirror DB platform - cloud SQLite SQL, NoSQL document collections and hybrid file storage over HTTPS.",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["nxmirror", "nxdb", "database", "sqlite", "nosql", "document", "storage", "cloud", "sdk"],
+    "homepage": "https://nxmirror.netlify.app",
+    "authors": [
+        {
+            "name": "NxMirror (CrossberryWeb)",
+            "homepage": "https://nxmirror.netlify.app"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NxDb\\": "src/"
+        }
+    },
+    "scripts": {
+        "setup": "php examples/00_setup_database.php",
+        "setup:cleanup": "php examples/00_setup_database.php --cleanup",
+        "connect": "php examples/01_connect.php",
+        "sql": "php examples/02_sql_crud.php",
+        "nosql": "php examples/03_nosql_crud.php",
+        "storage": "php examples/04_file_storage.php",
+        "errors": "php examples/05_error_handling.php",
+        "demo": "php examples/01_connect.php && php examples/02_sql_crud.php && php examples/03_nosql_crud.php && php examples/04_file_storage.php && php examples/05_error_handling.php",
+        "check": "python3 scripts/check_syntax.py"
+    },
+    "support": {
+        "docs": "https://nxmirror.netlify.app/docs",
+        "source": "https://github.com/crossberry-in/Demoapi"
+    }
+}
